@@ -1,10 +1,42 @@
-# OpenWebRx-Installer
-Creating a Web SDR with OpenWebRX and a 7-20$ SDR Dongle.
+# OpenWebRx Installer
 
-bash <(curl -Ls https://raw.githubusercontent.com/hmol33/OpenWebRx-Installer/master/OpenWebRx-Installer.sh)
+Installeer **OpenWebRx** (web-based SDR ontvanger) op Debian/Ubuntu Linux met
+dit installatie script. Het installeert alle benodigde dependencies, bouwt
+`rtl-sdr`, `libcsdr` en `openwebrx`, en configureert het systeem.
 
+## Wat het doet
 
----
+1. Installeert systeem dependencies (build-essential, git, libfftw3-dev,
+   cmake, libusb-1.0-0-dev, nmap)
+2. Klont en bouwt `rtl-sdr` van git.osmocom.org
+3. Blacklist de DVB-T driver (`dvb_usb_rtl28xxu`) die conflict geeft met rtl-sdr
+4. Klont `openwebrx` en `libcsdr` van GitHub
+5. Bouwt en installeert `libcsdr`
+
+## Vereisten
+
+- Debian/Ubuntu Linux
+- Root toegang (sudo)
+- RTL-SDR hardware (optioneel — software werkt ook zonder)
+
+## Installatie
+
+```bash
+chmod +x OpenWebRx-Installer.sh
+sudo ./OpenWebRx-Installer.sh
+```
+
+## Na installatie
+
+OpenWebRx wordt gebouwd in de `openwebrx/` map. De web interface is
+standaard bereikbaar op poort 8073.
+
+Zie de [OpenWebRx documentatie](https://github.com/simonyiszk/openwebrx)
+voor configuratie en gebruik.
+
+## License
+
+Zie de upstream licentie van OpenWebRx.
 
 ## 🎥 Gource Visualization
 
