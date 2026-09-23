@@ -57,3 +57,5 @@ ffmpeg -y -r 15 -f image2pipe -vcodec ppm -i gource.ppm \
   -vcodec libx264 -preset medium -pix_fmt yuv420p \
   -crf 1 -threads 0 -bf 0 gource.mp4
 ```
+
+<!-- workflow trigger: 2026-09-23T02:02:34Z -->
