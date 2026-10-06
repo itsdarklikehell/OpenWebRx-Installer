@@ -1,3 +1,4 @@
+#!/usr/bin/env bash
 #Install dependencies
 sudo apt-get install build-essential git libfftw3-dev cmake libusb-1.0-0-dev nmap
 #nmap itself is not used by OpenWebRX at all, but we need to install it because the ncat tool is packaged with it.
